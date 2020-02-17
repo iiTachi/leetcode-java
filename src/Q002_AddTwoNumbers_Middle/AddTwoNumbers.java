@@ -16,17 +16,18 @@ package Q002_AddTwoNumbers_Middle;
  * 输出：7 -> 0 -> 8
  * 原因：342 + 465 = 807
  */
+
 public class AddTwoNumbers {
 
-    // Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
+// Definition for singly-linked list.
+//    public static class ListNode {
+//        int val;
+//        ListNode next;
+//
+//        ListNode(int x) {
+//            val = x;
+//        }
+//    }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // 设置一个虚拟节点，仅用作始终指向头结点

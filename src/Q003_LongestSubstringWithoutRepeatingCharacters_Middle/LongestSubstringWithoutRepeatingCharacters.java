@@ -1,6 +1,7 @@
 package Q003_LongestSubstringWithoutRepeatingCharacters_Middle;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Howie Lu
@@ -31,7 +32,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         // 如果s长度为0，则直接返回0
         if (s.length()==0) return 0;
         // 使用map来模拟窗口，字符做key保证唯一，下标做value
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        Map<Character, Integer> map = new HashMap<>();
         int max = 0; // 保存当前不包含重复字符的最长字串的长度
         int left = 0; // 不包含重复字符的最长字串的开始下标（即最左边的下标）
         for(int i = 0; i < s.length(); i ++){
@@ -40,9 +41,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
                 left = Math.max(left, map.get(s.charAt(i)) + 1);
             }
             // 无论map中包不包含，都把该位置字符对应的entry放入map
-            map.put(s.charAt(i),i);
+            map.put(s.charAt(i), i);
             // 更新max，即为当前max与i-left+1中较大的那一个
-            max = Math.max(max,i-left+1);
+            max = Math.max(max, i-left+1);
         }
         return max;
     }

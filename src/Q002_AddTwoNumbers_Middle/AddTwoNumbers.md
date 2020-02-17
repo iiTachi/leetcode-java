@@ -31,15 +31,15 @@
 ```java
 public class AddTwoNumbers {
 
-    // Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
+    //Definition for singly-linked list.
+    //public static class ListNode {
+    //    int val;
+    //    ListNode next;
+    //
+    //   ListNode(int x) {
+    //       val = x;
+    //    }
+    //}
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // 设置一个虚拟节点，仅用作始终指向头结点
